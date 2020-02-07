@@ -37,11 +37,11 @@ CREATE TABLE `list` (
     `id_list` int NOT NULL AUTO_INCREMENT,
     `name` varchar(255)  NOT NULL,
     `total_price` int NOT NULL,
+    `id_user` int NOT NULL,
     `date_add` DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     `date_update` DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
     `date_delete` DATETIME,
     `activate` BOOLEAN default 1,
-    `id_user` int NOT NULL,
     PRIMARY KEY (`id_list`),
     FOREIGN KEY (`id_user`) REFERENCES users(`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -159,4 +159,4 @@ INSERT INTO `list_art`(`quantity`, `id_list`, `id_art`)
 COMMIT;
 
 
-/* mysql -u root -p bdd_app_course  < C:\wamp64\www\exercise_sql\bdd_app_course.sql Insert with comand line*/ 
+/* mysql -u root -p bdd_app_course  < C:\wamp64\www\exercise_sql\bdd_app_course.sql Insert with command line*/ 
