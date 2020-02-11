@@ -49,7 +49,10 @@ CREATE TABLE `list` (
 INSERT INTO `list`(`name`, `total_price`, `id_user`) 
          VALUES ('Coursedu07022020', '229', @Laslaa),
                 ('Coursedu08022020', '109', @Dufour),
-                ('Coursedu09022020', '159', @Devise);
+                ('Coursedu09022020', '159', @Devise),
+                ('Coursedu11022020', '229', @Laslaa),
+                ('Coursedu10022020', '109', @Dufour),
+                ('Coursedu12022020', '159', @Devise);
 
         set @Coursedu07022020 := last_insert_id();
         set @Coursedu08022020 := last_insert_id()+1;
